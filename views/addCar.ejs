@@ -1,0 +1,82 @@
+
+<% include ../parts/header %>
+
+
+        <h4 class="text-center"><b> Add Car Detail </b></h4>
+
+          <form id="newP" action="/addcar" method="POST" encType="multipart/form-data">
+            <div class="row">
+              <div class="form-group col-md-3">
+                <input class="form-control" type="text" name="name" value="" placeholder="Car Name" autofocus required>
+              </div>
+              <div class="form-group col-md-3">
+              <div class="form-group">
+                  <select class="form-control" name="company" required>
+                  <option selected >Company</option>
+                  <option name="Maruti Suzuki">Maruti Suzuki</option>
+                  <option name="Hyundai">Hyundai</option>
+                  <option name="Honda">Honda</option>
+                  <option name="Ford">Ford</option>
+                  <option name="Mahindra">Mahindra</option>
+                  <option name="BMW">BMW</option>
+                  <option name="Porche">Porche</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <input class="form-control" type="text" name="model" value="" placeholder="Model Name" required>
+              </div>
+              <div class="form-group col-md-3">
+              <div class=" col-md-6 form-group">
+                  <select class="form-control" name="type" required>
+                  <option selected >Type</option>
+                  <option name="SUV">SUV</option>
+                  <option name="Sedan">Sedan</option>
+                  <option name="Hatchback">Hatchback</option>
+                  <option name="MUV">MUV</option>
+                  <option name="NUV">NUV</option>
+                  </select>
+              </div>
+
+              </div>
+            </div>
+             <div class="row">
+              <div class="form-group col-md-3">
+                <div class="form-group">
+                  <textarea form="newP" rows="5" cols="5" class="form-control" name="description" value="" placeholder="Give Description..." required></textarea> 
+                </div>
+              </div>
+              <div class="form-group col-md-3">
+                <input class="form-control" type="text" name="color" value="" placeholder="Color" required>
+              </div>
+              <div class="form-group col-md-3">
+              <div class="input-group">
+                    <div class="input-group-addon">Ruppie.</div>
+                        <input class="form-control" type="number" name="prize" value="" placeholder="Tell a prize " min="0"  required>
+                    <div class="input-group-addon">.00</div>
+                </div>
+                </div>
+              <div class="form-group col-md-3">
+              <div class="input-group">
+                        <input class="form-control" type="number" name="engineCapacity" value="" placeholder="Engine Capacity" min="0"  required>
+                    <div class="input-group-addon">cc</div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+            <div class=" col-md-6 form-group">
+                  <select class="form-control" name="fuel" required>
+                  <option selected >Type of Fuel  </option>
+                  <option name="Petrol">Petrol</option>
+                  <option name="Diesal">Diesal</option>
+                  </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="file" name="img"><br>
+              <input type="hidden" name="img" value="">
+            </div>
+            <div class="form-group"> 
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div> 
+          </form>

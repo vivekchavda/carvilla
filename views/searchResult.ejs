@@ -1,0 +1,33 @@
+<% include ../parts/header %>
+    <div >
+        <% cars.forEach(function(car){ %>
+                <div>
+                <table class="table">
+                 <thead>
+                    <tr>
+                        <th>Car name</th>
+                        <th>Company</th>                        
+                        <th>Description</th>
+                        <th>Prize</th>
+                        <th>Color</th>
+                        <th>Fuel Type</th>
+                        <th>Engine Capacity</th>
+                        <th>Type</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><%=car.name %></td>
+                        <td><%=car.company %></td>
+                        <td><%=car.description %></td>
+                        <td><%=car.prize %></td>
+                        <td><%=car.color %></td>
+                        <td><%=car.fuel %></td>
+                        <td><%=car.engineCapacity %></td>
+                        <td><%=car.type %></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        <% }) %>
+    </div>
